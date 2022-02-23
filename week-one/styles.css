@@ -18,7 +18,6 @@ html {
   --solid-white: #ffffff;
   --primary-color: #c5295d;
   --secondary-color: #6868d9;
-  --tablet-size: 768px;
 }
 
 .header__container,
@@ -228,4 +227,36 @@ html {
 .tooltip.sale {
   background-color: var(--primary-color);
   font-weight: 700;
+}
+
+@media (max-width: 1441px) {
+  .header__container,
+  .nav__container,
+  .main__container,
+  .content__container {
+    width: 100%;
+    padding-inline: 32px;
+    margin: 0 auto;
+  }
+
+  .header__container,
+  .nav__list,
+  .aside__list {
+    display: none;
+  }
+
+  .nav__container {
+    border-block-start: 4px solid var(--grey-900);
+  }
+
+  .main__container {
+    flex-direction: column;
+  }
+
+  .aside__categories {
+    padding-block-start: 48px;
+  }
+  .content__categories {
+    padding-block: 8px;
+  }
 }
