@@ -18,12 +18,13 @@ html {
   --solid-white: #ffffff;
   --primary-color: #c5295d;
   --secondary-color: #6868d9;
+  --tablet-size: 768px;
 }
 
 .header__container,
 .nav__container,
 .main__container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -178,7 +179,9 @@ html {
 
 .card {
   margin-block-end: 60px;
+  position: relative;
 }
+
 .card__info,
 .card__extra-info {
   display: flex;
@@ -206,4 +209,23 @@ html {
 
 .new-price {
   color: var(--primary-color);
+}
+
+.tooltip {
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-end: -4px;
+  padding: 9px;
+  border-radius: 2px;
+  color: var(--solid-white);
+}
+
+.tooltip.just-released {
+  background-color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.tooltip.sale {
+  background-color: var(--primary-color);
+  font-weight: 700;
 }
