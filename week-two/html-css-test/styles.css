@@ -12,14 +12,32 @@ html {
 
 :root {
   --primary-50: hsla(264, 100%, 98%, 1);
+  --primary-600: hsla(259, 63%, 59%, 1);
   --primary-700: hsla(258, 54%, 52%, 1);
   --gray-300: hsla(216, 16%, 84%, 1);
   --gray-400: hsla(218, 15%, 65%, 1);
   --gray-500: hsla(220, 13%, 46%, 1);
   --gray-600: hsla(215, 18%, 34%, 1);
   --gray-700: hsla(217, 23%, 27%, 1);
+  --gray-900: hsla(221, 43%, 11%, 1);
   --gray-25: hsla(210, 20%, 99%, 1);
   --base-white: hsla(0, 0%, 100%, 1);
+}
+
+/* global styles */
+.button {
+  padding: 10px 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: var(--base-white);
+
+  display: flex;
+  align-items: center;
+
+  column-gap: 12px;
 }
 
 /* header styles */
@@ -105,8 +123,57 @@ html {
   cursor: pointer;
 }
 
+/* hero container */
+.hero {
+  background-color: var(--gray-25);
+}
+
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 112px;
+  border: 1px solid green;
+}
+
+/* page header styles */
+.page-header {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.page-header__title {
+  padding-block-end: 4px;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.page-header__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-500);
+}
+
+.page-header__buttons {
+  display: flex;
+  align-self: flex-start;
+  column-gap: 12px;
+}
+
+.button.deposit {
+  color: var(--gray-700);
+}
+
+.button.send-funds {
+  background-color: var(--primary-600);
+  color: var(--base-white);
+}
+
 /* laptop styles */
 @media (max-width: 1280px) {
+  /* header styles*/
   .header__nav,
   .header__icons {
     display: none;
@@ -123,6 +190,7 @@ html {
 
 /* tablet styles */
 @media (max-width: 768px) {
+  /* header styles */
   .header__container {
     padding-inline: 16px;
   }
@@ -132,4 +200,23 @@ html {
   .header__profile-picture {
     display: none;
   }
+
+  .hero-container {
+    padding-inline: 16px;
+    padding-block: 32px;
+  }
+
+  /* page header styles */
+  .page-header__title {
+    font-size: 24px;
+  }
+
+  .page-header__subtitle {
+    font-size: 16px;
+    padding-block-end: 16px;
+  }
+}
+
+/* phone styles */
+@media (max-width: 480px) {
 }
