@@ -94,6 +94,7 @@ html {
 .header__button:hover {
   border: transparent;
   background-color: var(--primary-50);
+  color: var(--primary-700);
 }
 
 .header__link {
