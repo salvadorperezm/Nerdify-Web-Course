@@ -425,6 +425,10 @@ html {
   color: var(--gray-900);
 }
 
+.row__title.mobile {
+  display: none;
+}
+
 .row__subtitle {
   font-weight: 400;
   font-size: 14px;
@@ -470,6 +474,7 @@ html {
   display: flex;
   align-items: center;
   column-gap: 20px;
+  row-gap: 30px;
   flex-wrap: wrap;
   padding-block: 24px;
 }
@@ -539,6 +544,7 @@ html {
 
 .dark__right {
   background-color: var(--salmon-color);
+  background-image: url("assets/images/credit-card-background.png");
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -644,6 +650,14 @@ html {
   .account-info__card {
     flex-direction: column;
     row-gap: 20px;
+  }
+
+  .row__title {
+    display: none;
+  }
+
+  .row__title.mobile {
+    display: block;
   }
 }
 
