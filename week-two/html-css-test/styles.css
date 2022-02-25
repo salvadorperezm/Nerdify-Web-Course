@@ -607,7 +607,7 @@ html {
 
 .credit-card__progress {
   height: 8px;
-
+  border-radius: 20px;
   background-color: var(--primary-50);
 }
 
