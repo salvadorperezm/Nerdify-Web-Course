@@ -417,6 +417,7 @@ html {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .row__title {
@@ -534,21 +535,21 @@ html {
 
 .credit-card__name,
 .credit-card__expiration {
-  font-weight: 600;
+  font-weight: 200;
   font-size: 12px;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
 }
 
 .credit-card__number {
   font-size: 16px;
-  font-weight: 600;
-  font-family: "Manrope";
+  font-weight: 200;
+  font-family: "Manrope", sans-serif;
 }
 
 .dark__right {
   background-color: var(--salmon-color);
   background-image: url("assets/images/credit-card-background.png");
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -563,11 +564,13 @@ html {
 
 .light__top {
   background-image: url("assets/images/credit-card-background.png");
+  background-position: right center;
+  background-repeat: no-repeat;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
-  background-color: var(--gray-100);
-  filter: drop-shadow(7.64557px 9.55696px 15.2911px rgba(0, 0, 0, 0.05));
+  background-color: hsl(150, 12%, 97%);
+  filter: drop-shadow(8px 10px 16px rgba(0, 0, 0, 0.05));
   backdrop-filter: blur(12px);
 
   display: flex;
@@ -722,7 +725,7 @@ html {
 }
 
 /* phone styles */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .account-info__first-row {
     display: none;
   }
@@ -739,6 +742,9 @@ html {
 
   .mobile-chart {
     display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .data-chart-mobile {
@@ -746,6 +752,7 @@ html {
   }
 
   .month__container-mobile {
+    width: 100%;
     padding-inline: 8px;
     display: flex;
     align-items: center;
