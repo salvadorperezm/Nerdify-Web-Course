@@ -492,8 +492,11 @@ html {
 }
 
 .credit-card.dark {
+  border-bottom-right-radius: 20px;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  box-shadow: 7.64557px 9.55696px 15.2911px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(11.4684px);
 }
 
 .credit-card.light {
@@ -545,6 +548,8 @@ html {
 .dark__right {
   background-color: var(--salmon-color);
   background-image: url("assets/images/credit-card-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -557,9 +562,14 @@ html {
 }
 
 .light__top {
-  background-color: var(--salmon-color);
+  background-image: url("assets/images/credit-card-background.png");
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+
+  background-color: var(--gray-100);
+  filter: drop-shadow(7.64557px 9.55696px 15.2911px rgba(0, 0, 0, 0.05));
+  backdrop-filter: blur(12px);
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -777,5 +787,10 @@ html {
     position: absolute;
     inset-block: 0px;
     inset-inline: calc((100% - 300px) / 2);
+  }
+
+  .light__top {
+    filter: none;
+    backdrop-filter: none;
   }
 }
