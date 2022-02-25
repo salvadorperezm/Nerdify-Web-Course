@@ -297,6 +297,28 @@ html {
 /*
   here comes the grid on main container
 */
+
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "balance-area    deposits-area"
+    "cards-area      deposits-area";
+  gap: 24px;
+}
+
+.balance-area {
+  grid-area: balance-area;
+}
+
+.cards-area {
+  grid-area: cards-area;
+}
+
+.deposits-area {
+  grid-area: deposits-area;
+}
+
 .main-container__card {
   border: 1px solid var(--gray-200);
   border-radius: 8px;
@@ -373,12 +395,25 @@ html {
   text-decoration: none;
 }
 
+.main-container__footer.cards {
+  border-block-start: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button.cards {
+  color: var(--gray-700);
+}
+
+/* card styles */
+
 /* laptop styles */
 @media (max-width: 1280px) {
   /* header styles*/
   .header__container,
   .hero-container {
-    padding-inline: 64px;
+    padding-inline: 16px;
   }
 
   .header__nav,
@@ -403,12 +438,16 @@ html {
 
 /* tablet styles */
 @media (max-width: 768px) {
-  /* header styles */
-  .header__container,
-  .hero-container {
-    padding-inline: 16px;
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "balance-area"
+      "cards-area"
+      "deposits-area";
+    row-gap: 24px;
   }
 
+  /* header styles */
   .header__button,
   .header__icons,
   .header__profile-picture {
